@@ -7,4 +7,26 @@
 @import "tailwindcss/utilities";
 /* @import "./custom-utilities.css"; */
 
-
+.borderGeradiant::before {
+  content: "";
+  @apply absolute inset-0 rounded-full border-2 border-transparent;
+  background: linear-gradient(
+    300deg,
+    white 0%,
+    transparent 50%,
+    transparent 60%,
+    white 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+.text-shadow {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.myinput {
+  background: linear-gradient(to right, red 0%, red 50%, #000 50%, #000 100%);
+  border-radius: 8px;
+  height: 7px;
+  -webkit-appearance: none;
+}
